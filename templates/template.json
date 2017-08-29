@@ -76,6 +76,13 @@
         "description": "Name of the virtual network"
       }
     }
+    },
+    "sizeOfEachDataDiskInGB": {
+      "type": "string",
+      "metadata": {
+        "description": "Size of each data disk in GB"
+      }
+    }
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'azsample')]",
@@ -228,6 +235,13 @@
             "sku": "[parameters('imageSku')]",
             "version": "latest"
           },
+          "dataDisks": [
+            {
+              "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
+              "lun": 0,
+              "createOption": "Empty"
+            },
+          ],
           "osDisk": {
             "name": "osdisk",
             "vhd": {
