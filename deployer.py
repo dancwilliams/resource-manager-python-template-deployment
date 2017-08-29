@@ -37,7 +37,7 @@ class Deployer(object):
         self.client.resource_groups.create_or_update(
             self.resource_group,
             {
-                'location':'westus'
+                'location':'eastus'
             }
         )
 
