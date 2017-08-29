@@ -234,11 +234,13 @@
             "sku": "[parameters('imageSku')]",
             "version": "latest"
           },
-          "dataDisks": {
+          "dataDisks": [
+            {
             "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
             "lun": 0,
             "createOption": "Empty"
-          },
+            },
+          ],
           "osDisk": {
             "name": "osdisk",
             "vhd": {
