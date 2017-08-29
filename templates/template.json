@@ -75,7 +75,6 @@
       "metadata": {
         "description": "Name of the virtual network"
       }
-    }
     },
     "sizeOfEachDataDiskInGB": {
       "type": "string",
