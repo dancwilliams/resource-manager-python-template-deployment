@@ -29,7 +29,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'salinuxvm')]",
+    "storageAccountName": "cumulustestdiag151",
     "imagePublisher": "OpenLogic",
     "imageOffer": "CentOS",
     "nicName": "myVMNic",
@@ -157,8 +157,8 @@
           },
           "dataDisks": [
             {
-              "diskSizeGB": "1023",
-              "lun": 0,
+              "diskSizeGB": "512",
+              "lun": 1,
               "createOption": "Empty"
             }
           ]
