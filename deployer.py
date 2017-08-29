@@ -47,14 +47,8 @@ class Deployer(object):
 
         parameters = {
             'sshKeyData': self.pub_ssh_key,
-            'vmName': 'cumulusMaster',
             'dnsLabelPrefix': self.dns_label_prefix,
-            'sizeOfEachDataDiskInGB': '512',
-            'vmSize': 'Standard_E4s_v3',
-            'imagePublisher': 'OpenLogic',
-            'imageOffer': 'CentOS',
-            'imageSku': '7.3',
-            'imageVersion': 'latest'
+            'adminUsername': 'cumulus'
         }
         parameters = {k: {'value': v} for k, v in parameters.items()}
 
