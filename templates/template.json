@@ -234,7 +234,7 @@
             "sku": "[parameters('imageSku')]",
             "version": "latest"
           },
-          "dataDisk": {
+          "dataDisks": {
             "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
             "lun": 0,
             "createOption": "Empty"
