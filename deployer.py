@@ -47,8 +47,9 @@ class Deployer(object):
 
         parameters = {
             'sshKeyData': self.pub_ssh_key,
-            'vmName': 'azure-deployment-sample-vm',
+            'vmName': 'cumulusMaster',
             'dnsLabelPrefix': self.dns_label_prefix
+            'sizeOfEachDataDiskInGB': '512'
         }
         parameters = {k: {'value': v} for k, v in parameters.items()}
 
@@ -60,7 +61,7 @@ class Deployer(object):
 
         deployment_async_operation = self.client.deployments.create_or_update(
             self.resource_group,
-            'azure-sample',
+            'cumulus-sample',
             deployment_properties
         )
         deployment_async_operation.wait()
