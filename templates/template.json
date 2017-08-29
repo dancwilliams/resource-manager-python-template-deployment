@@ -239,12 +239,7 @@
               "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
               "lun": 0,
               "createOption": "Empty"
-            },
-            {
-              "diskSizeGB": "1",
-              "lun": 1,
-              "createOption": "Empty"
-            },
+            }
           ],
           "osDisk": {
             "name": "osdisk",
